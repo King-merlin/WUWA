@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="mystyle.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Wuthering Waves</a>
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Characters</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="action">
+                <div class="searchBx">
+                    <a href="#"><i class='bx bx-search'></i> </a>
+                    <input type="text" placeholder="Search Character">
+                </div>
+            </div>
+            <div class="toggleMenu"></div>
+        </header>
+        <div class="Characters">
+            <h2><br>Resonators</h2>
+            <ul>
+                <li class="list active" data-filter="all">All</li>
+                <li class="list" data-filter="Huonglong">Huonglong</li>
+                <li class="list" data-filter="Rinoscita">Rinoscita</li>
+                <li class="list" data-filter="Black-Shore">Black Shore</li>
+            </ul>
+            <div class="cardBx">
+                <div class="card" data-item="Huonglong">
+                    <img src="images/jiyan-char.png">
+                    <div class="content">
+                        <h4>Jiyian</h4>
+                        <div class="strength"><span></span></div>
+                        <div class="info">
+                            <p>attributes<br><span>Areo</span></p>
+                            <a href="#">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-item="Huonglong">
+                    <img src="images/Yinlin-char.png">
+                    <div class="content">
+                        <h4>Yinlin</h4>
+                        <div class="strength"><span></span></div>
+                        <div class="info">
+                            <p>attributes<br><span>electro</span></p>
+                            <a href="#">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-item="Rinoscita">
+                    <img src="images/verina-char.png">
+                    <div class="content">
+                        <h4>Verina</h4>
+                        <div class="strength"><span></span></div>
+                        <div class="info">
+                            <p>attributes<br><span>Spectro</span></p>
+                            <a href="#">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-item="Rinoscita">
+                    <img src="images/encore-char.png">
+                    <div class="content">
+                        <h4>Encore</h4>
+                        <div class="strength"><span></span></div>
+                        <div class="info">
+                            <p>attributes<br><span>Fushion</span></p>
+                            <a href="#">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-item="Huonglong">
+                    <img src="images/calcharo-char.png">
+                    <div class="content">
+                        <h4>Calcharo</h4>
+                        <div class="strength"><span></span></div>
+                        <div class="info">
+                            <p>attributes<br><span>electro</span></p>
+                            <a href="#">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-item="Huonglong">
+                    <img src="images/jiyan-char.png">
+                    <div class="content">
+                        <h4>Character name</h4>
+                        <div class="strength"><span></span></div>
+                        <div class="info">
+                            <p>attributes<br><span>electro</span></p>
+                            <a href="#">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-item="Rinoscita">
+                    <img src="images/jiyan-char.png">
+                    <div class="content">
+                        <h4>Character name</h4>
+                        <div class="strength"><span></span></div>
+                        <div class="info">
+                            <p>attributes<br><span>electro</span></p>
+                            <a href="#">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-item="Black-Shore">
+                    <img src="images/jiyan-char.png">
+                    <div class="content">
+                        <h4>Character name</h4>
+                        <div class="strength"><span></span></div>
+                        <div class="info">
+                            <p>attributes<br><span>electro</span></p>
+                            <a href="#">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+           let list = document.querySelectorAll('.list');
+            let card = document.querySelectorAll('.card');
+
+            for(let i = 0; i<list.length; i++){
+                list[i].addEventListener('click',function(){
+                    for(let j = 0; j<list.length; j++){
+                        list[j].classList.remove('active');
+                    }
+                    this.classList.add('active');
+
+                    let datafilter = this.getAttribute('data-filter');
+
+                    for( let k = 0; k<card.length; k++)
+                    {
+                        card[k].classList.remove('active');
+                        card[k].classList.add('hide');
+
+                        if(card[k].getAttribute('data-item') == datafilter || datafilter == 'all'){
+                            card[k].classList.remove('hide');
+                            card[k].classList.add('active');
+                        }
+                    }
+                })
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #131313;
+}
+/*scroll bar*/
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: #f14e02d3;
+    border-radius: 6px;
+}
+
+/*--------NAVAGATION BAR----------*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 7px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000000b7;
+    transition: 0.5s;
+    z-index: 1000;
+}
+header .sticky{
+    background: #000000b7;
+    box-shadow: 0 5px 20px rgba(70, 69, 69, 0.9);
+}
+header.logo{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+}
+header .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+header ul li{
+    list-style: none;
+    margin: 10px;
+}
+header ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+header ul li a:hover{
+    background: #fff;
+    color: #000000;
+    box-shadow: 0 0 10px #ffffff;
+}
+/*---------search icon---------*/
+header .action .searchBx{
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 5px;
+}
+header .action .searchBx i{
+    font-size: 1.4em;
+    margin: 5px;
+    color: #131313;
+}
+header .action .searchBx input{
+    outline: none;
+    border: none;
+    font-size: 1em;
+    color: #131313;
+}
+
+/*home banner*/
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .bg{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    /*diaplay flex*/
+    justify-content: center;
+    align-items: center;
+}
+.banner .bg .content{
+    width: 100%;
+    height: 100%;
+}
+.banner .bg .content h2{
+    font-size: 2em;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.banner .bg .content p{
+    font-size: 2em;
+    color: #dbd9d9;
+    letter-spacing: 1px;
+}
+.banner .bg .content a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #313131;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.banner .bg .content a:hover{
+    background: #ffffff;
+    border: none;
+    color: #131313;
+    box-shadow: 0px 0px 10px #dbd9d9;
+}
+.banner .bg img{
+    max-width: 100%;
+}
+
+/*----About us---*/
+.about{
+    position: relative;
+    width: 100%;
+    min-width: 75vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .contentBx{
+    width: 50%;
+    margin: 20px;
+}
+.about .contentBx h2{
+    font-size: 3em;
+    font-weight: 700;
+    color: #fff;
+}
+.about .contentBx p{
+    max-width: 600px;
+    text-align: justify;
+    color: #dbd9d9;
+}
+.about .contentBx a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #313131;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.about .contentBx a:hover{
+    background: #ffffff;
+    border: none;
+    color: #131313;
+    box-shadow: 0px 0px 10px #dbd9d9;
+}
+/*Characters*/
+.Characters{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px auto;
+}
+.Characters h2{
+    color: #fff;
+    margin:  10px 0;
+}
+.Characters ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.Characters ul li{
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #fff;
+}
+.Characters ul li.active {
+    background: #fff;
+    color: #131313;
+    box-shadow: 0px 0px 10px #ffffff;
+}
+.Characters .cardBx{
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Characters .cardBx .card{
+    width: 280px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: #423e3e;
+    overflow: hidden;
+}
+.Characters .cardBx .card img{
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+.Characters .cardBx .card .content{
+    padding: 10px;
+}
+.Characters .cardBx .card .content h4{
+    color: #fff;
+    margin: 15px 0;
+}
+.Characters .cardBx .card .strength{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #0c0a0e;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.Characters .cardBx .card .strength span{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px #ffffff;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.Characters .cardBx .card .info{
+    border-top: 2px solid #09000eb7;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Characters .cardBx .card .info p{
+    font-size: 1em;
+    color: #fff;
+}
+.Characters .cardBx .card .info p .span{
+    color: #fff;
+}
+.Characters .cardBx .card .info a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #131313;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.Characters .cardBx .card .info a:hover{
+    background: #ffffff;
+    border: none;
+    color: #131313;
+    box-shadow: 0px 0px 10px #dbd9d9;
+}
+.Characters .cardBx .card.hide{
+    display: none;
+}
+
+
+
+
+
+
+
+
+/*button
+a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #313131;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.about .contentBx a:hover{
+    background: #ffffff;
+    border: none;
+    color: #131313;
+    box-shadow: 0px 0px 10px #dbd9d9;*/
